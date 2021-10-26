@@ -83,7 +83,7 @@ fn classify_char(c: char) -> CharCategory {
     if let Some(category) = classify_separator(c) {
         CharCategory::Separator(category)
     } else if is_cjk(c) {
-        CharCategory::Cjk
+        CharCategory::Separator(category)
     } else {
         CharCategory::Other
     }
